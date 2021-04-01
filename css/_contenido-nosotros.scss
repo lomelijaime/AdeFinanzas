@@ -1,0 +1,16 @@
+.nosotros-layout{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-top: 5rem;
+    gap: 2rem;
+
+    .img-nosotros{
+        background-image: url("../img/Nosotros1.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        // background-attachment: fixed;
+        height: 60rem;
+        border-radius: 3rem;
+    }
+}
