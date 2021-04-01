@@ -1,12 +1,25 @@
-.consejos-ahorro{
-    li{
-        list-style: none;
-        padding: 0;
-    }
+.consejos-ahorro {
+  li {
+    list-style: none;
+    padding: 0;
+  }
 }
-.lista-numerada{
-    li{
-        list-style: decimal;
-        padding-left: 1rem;
-    }
+.lista-numerada {
+  li {
+    list-style: decimal;
+    padding-left: 1rem;
+  }
+}
+.img-ahorro {
+  background-image: url(../img/ahorro.jpg);
+  height: 60rem;
+  width: 95%;
+  margin: 0 auto;
+  // background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 10rem;
+  -webkit-box-shadow: 7px 5px 16px 5px rgba(0, 0, 0, 0.32);
+  box-shadow: 7px 5px 16px 5px rgba(0, 0, 0, 0.32);
 }
