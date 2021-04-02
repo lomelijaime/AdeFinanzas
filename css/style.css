@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 2rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#25496B), color-stop(15rem, #adbcb2));
   background: linear-gradient(180deg, #25496B 0%, #adbcb2 15rem);
   background-repeat: no-repeat;
@@ -221,22 +221,37 @@ nav .burger div {
   border-radius: 40rem;
 }
 
-.nosotros-layout {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 3fr 1fr;
-      grid-template-columns: 3fr 1fr;
-  margin-top: 5rem;
-  gap: 2rem;
+@media screen and (max-width: 768px) {
+  .img-nosotros {
+    height: 10rem;
+    width: 100%;
+  }
 }
 
-.nosotros-layout .img-nosotros {
-  background-image: url("../img/Nosotros1.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 60rem;
-  border-radius: 3rem;
+.img-nosotros {
+  border-radius: 2rem;
+  -webkit-box-shadow: 7px 5px 16px 5px rgba(0, 0, 0, 0.32);
+          box-shadow: 7px 5px 16px 5px rgba(0, 0, 0, 0.32);
+  margin: .5rem;
+}
+
+.img-nosotros:first-of-type {
+  float: right;
+  height: 70rem;
+  width: 30%;
+}
+
+.img-nosotros:last-of-type {
+  height: 40rem;
+  width: calc(70% - 5rem);
+}
+
+.nosotros-layout {
+  line-height: 1.5;
+}
+
+.fas {
+  font-size: 8rem;
 }
 
 .consejos-ahorro li {
@@ -320,6 +335,10 @@ nav .burger div {
   color: white;
   -webkit-transition: all 500ms;
   transition: all 500ms;
+}
+
+.mensaje_trasero div p {
+  font-size: 1.6rem;
 }
 
 .mensaje_trasero div p,
