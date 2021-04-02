@@ -13,13 +13,25 @@
 .img-ahorro {
   background-image: url(../img/ahorro.jpg);
   height: 60rem;
-  width: 95%;
-  margin: 0 auto;
+  width: 94%;
+  margin: 3%;
   // background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   border-radius: 10rem;
-  -webkit-box-shadow: 7px 5px 16px 5px rgba(0, 0, 0, 0.32);
-  box-shadow: 7px 5px 16px 5px rgba(0, 0, 0, 0.32);
+  box-shadow: $sombra;
+}
+.img-ahorro_intro {
+  // height: 50rem;
+  width: 96%;
+  margin: 2%;
+  border-radius: 10rem;
+  box-shadow: $sombra;
+}
+@media (min-width: 768px) {
+  .img-ahorro_intro {
+    float: right;
+    width: 40%;
+  }
 }
