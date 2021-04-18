@@ -5,8 +5,8 @@ html {
 
 body {
   font-size: 2rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#25496B), color-stop(25%, #adbcb2));
-  background: linear-gradient(180deg, #25496B 0%, #adbcb2 25%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#25496B), color-stop(15rem, #adbcb2));
+  background: linear-gradient(180deg, #25496B 0%, #adbcb2 15rem);
   background-repeat: no-repeat;
 }
 
@@ -52,8 +52,7 @@ a {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
-  padding: .5rem;
-  text-align: justify;
+  padding: .7rem;
 }
 
 .alinear {
@@ -132,6 +131,7 @@ nav .burger div {
     font-size: 3rem;
   }
   nav .nav-links {
+    z-index: 1;
     position: absolute;
     right: 0;
     height: 92vh;
@@ -231,7 +231,7 @@ nav .burger div {
 }
 
 .nosotros-layout .img-nosotros {
-  background-image: url("../img/Nosotros1.jpg");
+  background-image: url("../img/Nosotros.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -247,6 +247,34 @@ nav .burger div {
 .lista-numerada li {
   list-style: decimal;
   padding-left: 1rem;
+}
+
+.img-ahorro {
+  background-image: url(../img/ahorro.jpg);
+  height: 60rem;
+  width: 94%;
+  margin: 3%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 10rem;
+  -webkit-box-shadow: 7px 5px 16px 5px rgba(0, 0, 0, 0.32);
+          box-shadow: 7px 5px 16px 5px rgba(0, 0, 0, 0.32);
+}
+
+.img-ahorro_intro {
+  width: 96%;
+  margin: 2%;
+  border-radius: 10rem;
+  -webkit-box-shadow: 7px 5px 16px 5px rgba(0, 0, 0, 0.32);
+          box-shadow: 7px 5px 16px 5px rgba(0, 0, 0, 0.32);
+}
+
+@media (min-width: 768px) {
+  .img-ahorro_intro {
+    float: right;
+    width: 40%;
+  }
 }
 
 .img-tarjeta {
