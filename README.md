@@ -1,2 +1,0 @@
-# aprendefinanzasCETI
-Proyecto titulación

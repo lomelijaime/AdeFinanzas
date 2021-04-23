@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="SVGRoot" width="32px" height="32px" version="1.1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <ellipse cx="16.009" cy="16.107" rx="15.902" ry="15.982" fill="#162d50" stroke-width="1.0455"/>
+ <text transform="scale(.54191 1.8453)" x="1.7592043" y="11.238554" fill="#dbdee3" font-family="sans-serif" font-size="7.6923px" stroke-width=".95703" style="line-height:1.25" xml:space="preserve"><tspan x="1.7592043" y="11.238554" fill="#dbdee3" font-family="Candara" font-size="7.6923px" font-style="italic" font-weight="bold" stroke-width=".95703">AprendeFinanzas</tspan></text>
+ <g fill="#f60" fill-rule="evenodd">
+  <path d="m22.619 6.7254 7.9975 2.3243v0.44843l-7.9975-2.4153z" points="30.616693,9.0497076 30.616693,9.4981402 22.619221,7.0828001 22.619221,6.7254321 "/>
+  <path d="m3.0128 2.4123v1.0861l19.606 3.5845v-0.35737z" points="3.0127725,3.4983395 22.619221,7.0828001 22.619221,6.7254321 3.0127725,2.4122632 "/>
+  <path d="m3.0128 3.4983 18.987 9.5017 8.6167-3.5019-7.9975-2.4153z" points="22,13 30.616693,9.4981402 22.619221,7.0828001 3.0127725,3.4983395 "/>
+  <path d="m3.0128 2.4123 18.987 7.7508 8.6167-1.1134-7.9975-2.3243z" points="22,10.163111 30.616693,9.0497076 22.619221,6.7254321 3.0127725,2.4122632 "/>
+  <path d="m22 10.163v2.8369l8.6167-3.5019v-0.44843z" points="22,13 30.616693,9.4981402 30.616693,9.0497076 22,10.163111 "/>
+  <path d="m3.0128 2.4123 18.987 7.7508v2.8369l-18.987-9.5017z" points="22,10.163111 22,13 3.0127725,3.4983395 3.0127725,2.4122632 "/>
+ </g>
+</svg>
