@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 62.5%;
+}
+body {
+  font-size: 2rem;
+  // background: $fondo;
+  background-repeat: no-repeat;
+}
+/*Titulos*/
+h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+h2 {
+  font-size: 3.8rem;
+}
+h3 {
+  font-size: 3.4rem;
+}
+h4 {
+  font-size: 3rem;
+}
+h1,
+h2 {
+  font-weight: 900;
+  &:not(:first-of-type){
+  padding-top: 12vh;
+  }
+}
+h3,
+h4 {
+  font-weight: bold;
+}
+
+/*Reset a enlaces*/
+a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+}
+.nav-links {
+  li {
+    padding: 0;
+    list-style: none;
+  }
+}
+.contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0.7rem;
+
+  p {
+    font-size: 2rem;
+    // max-width: 60%;  
+    margin: 1.5rem auto;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+.alinear {
+  text-align: center;
+}
+
+footer {
+  max-width: 100%;
+  background-color: black;
+  padding: 2rem 1rem;
+  .logo {
+    font-size: 3rem;
+  }
+}
+.logo {
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 2px;
+  span {
+    font-weight: 900;
+    font-style: normal;
+  }
+}
+
+.img-introduccion {
+  background-image: url(../../img/introduccion.jpg);
+  background-repeat: no-repeat;
+  background-position: 15% center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 70vh;
+  // max-width: 60rem;
+  border-radius: 7rem;
+  margin-top: 3rem;
+}
