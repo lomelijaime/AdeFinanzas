@@ -89,25 +89,25 @@ function ejecuta_consulta()
             <div>
                 <h2 id="Contacto" class="alinear">Contacto</h2>
 
-                <form action="#" class="formulario">
+                <form action="contactar.php" class="formulario" id="frmContacto">
                     <fieldset>
                         <legend>Contáctanos llenando todos los campos</legend>
                         <div class="contenedor-campos">
                             <div class="campo">
                                 <label>Nombre</label>
-                                <input class="texto-campo" type="text" name="nombre" placeholder="Tu Nombre" required autocomplete="off" />
+                                <input class="texto-campo" type="text" name="nombre" id="frmNombre" placeholder="Tu Nombre" required autocomplete="off" />
                             </div>
                             <div class="campo">
                                 <label>Teléfono</label>
-                                <input class="texto-campo" type="tel" name="telefono" placeholder="Tu Teléfono" required autocomplete="off" />
+                                <input class="texto-campo" type="tel" name="telefono" id="frmTelefono" placeholder="Tu Teléfono" required autocomplete="off" />
                             </div>
                             <div class="campo">
                                 <label>Correo Electrónico</label>
-                                <input class="texto-campo" type="email" name="email" placeholder="Tu E-mail" required autocomplete="email" />
+                                <input class="texto-campo" type="email" name="email" id="frmEmail" placeholder="Tu E-mail" required autocomplete="email" />
                             </div>
                             <div class="campo">
                                 <label>Contenido</label>
-                                <textarea class="texto-campo text-md" autocomplete="off" placeholder="Redacta aquí tu mensaje"></textarea>
+                                <textarea class="texto-campo text-md" name="contenido" id="frmContenido" autocomplete="off" placeholder="Redacta aquí tu mensaje"></textarea>
                             </div>
                         </div>
                         <div class="flex-align--der">
@@ -120,6 +120,7 @@ function ejecuta_consulta()
     </main>
     <?php require './assets/src/php/minFooter.php' ?>
     <script src="./assets/src/js/app.js"></script>
+    <script src="./assets/src/js/validaFrm.js"></script>
 </body>
 
 </html>
