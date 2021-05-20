@@ -31,6 +31,7 @@ function ejecuta_consulta()
 
 <body>
     <?php require './assets/src/php/minHeader.php';
+    if(isset($index))
     echo $index; ?>
     <main>
         <div class="contenedor">

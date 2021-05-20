@@ -12,6 +12,7 @@
 
 <body>
     <?php require './assets/src/php/minHeader.php';
+    if(isset($others))
     echo $others; ?>
     <main>
         <h1>Recurso N</h1>

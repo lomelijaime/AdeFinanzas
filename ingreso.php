@@ -12,6 +12,7 @@
 
 <body>
     <?php require './assets/src/php/minHeader.php';
+    if(isset($others))
     echo $others; ?>
         <main class="bg-ingresar">
       <div class="oscurecer-fondo">
