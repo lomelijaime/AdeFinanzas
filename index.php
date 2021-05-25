@@ -1,21 +1,5 @@
 <?php
-header('Content-Type: text/html; charset=UTF-8');
-function ejecuta_consulta()
-{
-    $conections = mysqli_connect('localhost', 'root', '', 'pruebablg');
-    if (!$conections) die("Error");
-
-    mysqli_query($conections, "SET NAMES 'utf8'");
-    $consulta = "SELECT * FROM post";
-    $resultado = mysqli_query($conections, $consulta);
-    $filas = array();
-
-    while ($fila = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
-        $filas[] = $fila;
-    }
-    mysqli_close($conections);
-    return $filas;
-}
+require './assets/src/php/postsConexion.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -84,12 +68,12 @@ function ejecuta_consulta()
                             <a href="/aprendefinanzas/recurso/<?php echo $post['ID_Post']; ?>" class="boton w-sm-total card-btn">Ver más</a>
                         </div>
                     </div>
-                <?php } ?>
+                <?php }?>
             </div>
             <div>
                 <h2 id="Contacto" class="alinear">Contacto</h2>
 
-                <form action="contactar.php" class="formulario" id="frmContacto">
+                <form action="./assets/src/php/contacto.php" method="post" class="formulario" id="frmContacto">
                     <fieldset>
                         <legend>Contáctanos llenando todos los campos</legend>
                         <div class="contenedor-campos">
@@ -111,7 +95,7 @@ function ejecuta_consulta()
                             </div>
                         </div>
                         <div class="flex-align--der">
-                            <input class="boton w-sm-total" type="submit" value="Enviar" />
+                            <input class="boton w-sm-total" type="submit" name="enviar" value="Enviar" />
                         </div>
                     </fieldset>
                 </form>
