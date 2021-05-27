@@ -67,3 +67,36 @@ const loginAnimation = () => {
   };
   
   loginAnimation();
+
+  //Validación Formularios
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('frmLogin').addEventListener("submit", validarFormularioIngreso);
+ });
+ 
+ const validarFormularioIngreso = e => {
+    e.preventDefault();
+    let usuario = document.querySelector('#frmUsername').value;
+    let password = document.querySelector('#frmPassword').value;
+    if (usuario.length === 0 || password.length === 0){
+       alert('Por favor, ingresa tus credenciales de ingreso.');
+       return;
+    }
+    this.submit();
+ }
+
+ document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById('frmSignup').addEventListener("submit", validarFormularioRegistro);
+});
+
+ const validarFormularioRegistro = e => {
+  e.preventDefault();
+  let nombre = document.querySelector('#frmNameSignup').value;
+  let usuario = document.querySelector('#frmUsernameSignup').value;
+  let password = document.querySelector('#frmPasswordSignup').value;
+  let verificarPassword = document.querySelector('#frmVerifySignup').value;
+  if (nombre.length === 0 || usuario.length === 0 || password.length === 0 || verificarPassword.length === 0){
+     alert('Debes llenar todos los campos para registrarte.');
+     return;
+  }
+  this.submit();
+}

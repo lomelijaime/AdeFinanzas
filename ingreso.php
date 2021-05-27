@@ -30,18 +30,18 @@
             </div>
           </div>
           <div class="contenedor_login-registro">
-            <form action="./php/login.php" method="POST" class="formulario_login">
+            <form action="./php/login.php" method="POST" class="formulario_login" id="frmLogin">
               <h2>Iniciar Sesión</h2>
-              <input name="username" type="text" placeholder="Usuario" />
-              <input name="password" type="password" placeholder="Contraseña" />
+              <input name="username" id="frmUsernameLogin" type="text" placeholder="Usuario" />
+              <input name="password" id="frmPasswordLogin" type="password" placeholder="Contraseña" />
               <button type="submit">Ingresar</button>
             </form>
-            <form action="./php/signup.php" method="POST" class="formulario_registro">
+            <form action="./php/signup.php" method="POST" class="formulario_registro" id="frmSingup">
               <h2>Regístrate</h2>
-              <input name="name" type="text" placeholder="Nombre completo" />
-              <input name="username" type="text" placeholder="Usuario" />
-              <input name="password" type="password" placeholder="Contraseña" />
-              <input name="verify_password" type="password" placeholder="Repita su contraseña" />
+              <input name="name" id="frmNameSignup" type="text" placeholder="Nombre completo" />
+              <input name="username" id="frmUsernameSignup" type="text" placeholder="Usuario" />
+              <input name="password" id="frmPasswordSignup" type="password" placeholder="Contraseña" />
+              <input name="verify_password" id="frmVerifySignup" type="password" placeholder="Repita su contraseña" />
               <button type="submit">Registrarse</button>
             </form>
           </div>
