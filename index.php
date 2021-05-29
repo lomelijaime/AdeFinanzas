@@ -1,4 +1,5 @@
 <?php
+session_start();
 require './assets/src/php/postsConexion.php';
 ?>
 <!DOCTYPE html>
@@ -65,7 +66,7 @@ require './assets/src/php/postsConexion.php';
                         <div class="card-contenido">
                             <h3 class=""><?php echo $post['Title']; ?></h3>
                             <p class=""><?php echo $post['Date']; ?></p>
-                            <a href="/aprendefinanzas/recurso/<?php echo $post['ID_Post']; ?>" class="boton w-sm-total card-btn">Ver más</a>
+                            <a href="/aprendefinanzas/recurso.php?publicacionId=<?php echo $post['ID_Post']; ?>" class="boton w-sm-total card-btn">Ver más</a>
                         </div>
                     </div>
                 <?php }?>

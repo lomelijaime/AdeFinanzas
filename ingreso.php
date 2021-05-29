@@ -41,7 +41,7 @@ session_start();
             </form>
             <form action="./assets/src/php/signup.php" method="POST" class="formulario_registro" id="frmSignup">
               <h2>Regístrate</h2>
-              <input name="frmNameSignup" id="frmNameSignup" type="text" placeholder="Nombre completo" pattern="[a-zA-Z0-9]+" required minlength="6"/>
+              <input name="frmNameSignup" id="frmNameSignup" type="text" placeholder="Nombre completo" required minlength="6"/>
               <input name="frmUsernameSignup" id="frmUsernameSignup" type="text" placeholder="Usuario" pattern="[a-zA-Z0-9]+" required minlength="6"/>
               <input name="frmPasswordSignup" id="frmPasswordSignup" type="password" placeholder="Contraseña" required minlength="6"/>
               <input name="frmVerifySignup" id="frmVerifySignup" type="password" placeholder="Repita su contraseña" required minlength="6"/>

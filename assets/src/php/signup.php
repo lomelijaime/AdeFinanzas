@@ -17,6 +17,7 @@ if (isset($_POST['frmNameSignup']) && isset($_POST['frmUsernameSignup']) && isse
     mysqli_stmt_store_result($query);
     if (mysqli_stmt_affected_rows($query) > 0) {
         echo "Error, usuario ya existente. Redirigiendo...";
+        mysqli_close($conn);
         header("refresh:3; ./../../../ingreso.php");
     }
     if (mysqli_stmt_num_rows($query) == 0) {
@@ -31,5 +32,6 @@ if (isset($_POST['frmNameSignup']) && isset($_POST['frmUsernameSignup']) && isse
         mysqli_stmt_close($stmt);
 
         header("Location: ./../../../ingreso.php");
+        mysqli_close($conn);
     }
 } else echo "Error";

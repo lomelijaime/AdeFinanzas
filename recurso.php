@@ -1,3 +1,8 @@
+<?php
+session_start();
+if (!isset($_SESSION['userName']))
+    header('Location: ./ingreso.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
 
