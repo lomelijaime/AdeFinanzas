@@ -1,7 +1,29 @@
 <?php
 session_start();
+header('Content-Type: text/html; charset=UTF-8');
 if (!isset($_SESSION['userName']))
     header('Location: ./ingreso.php');
+
+$idPost = $_GET['publicacionId'];
+$conn = mysqli_connect('localhost', 'root', '', 'pruebablg');
+if (!$conn) {
+    printf("Error de conexión %s\n", mysqli_connect_error());
+    exit();
+}
+mysqli_query($conn, "SET NAMES 'utf8'");
+$query = mysqli_prepare($conn, "SELECT * FROM post WHERE ID_Post= ?");
+mysqli_stmt_bind_param($query, "i", $idPost);
+mysqli_stmt_execute($query);
+mysqli_stmt_store_result($query);
+
+if (mysqli_stmt_num_rows($query) == 0){
+    header('Location: ./../../../ingreso.php');
+}
+if (mysqli_stmt_num_rows($query) == 1) {
+    mysqli_stmt_bind_result($query, $postID, $postTitle, $postImage, $postDate ,$postContent);
+    mysqli_stmt_fetch($query);
+    
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -20,7 +42,9 @@ if (!isset($_SESSION['userName']))
     if(isset($others))
     echo $others; ?>
     <main>
-        <h1>Recurso N</h1>
+        <img src="<?php echo $postImage; ?>">
+        <div><?php echo $postContent; ?>
+        <p>Publicado el: <?php echo $postDate;} ?></p>
     </main>
     <?php require './assets/src/php/minFooter.php' ?>
     <script src="./assets/src/js/app.js"></script>

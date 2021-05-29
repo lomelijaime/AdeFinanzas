@@ -3,7 +3,7 @@ $index = <<< EOF
 <header class="bg-encabezado sticky">
         <nav class="navegacion contenedor">
             <div class="logo">
-            <a href="AdeFinanzas/">Aprende<span class=>Finanzas</span></a>
+            <a href="/AdeFinanzas/">Aprende<span class=>Finanzas</span></a>
             </div>
             <ul class="nav-links">
             <li><a href="/AdeFinanzas/">Inicio</a></li>
@@ -25,7 +25,7 @@ $others = <<< EOT
 <header class="bg-encabezado sticky">
         <nav class="navegacion contenedor">
             <div class="logo">
-            <a href="AdeFinanzas/">Aprende<span class=>Finanzas</span></a>
+            <a href="/AdeFinanzas/">Aprende<span class=>Finanzas</span></a>
             </div>
             <ul class="nav-links">
             <li><a href="/AdeFinanzas/">Inicio</a></li>

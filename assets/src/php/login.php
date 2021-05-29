@@ -25,8 +25,8 @@ if (isset($_POST['frmUsernameLogin']) && isset($_POST['frmPasswordLogin'])) {
         mysqli_stmt_bind_result($query, $userNombre, $userPassword);
         mysqli_stmt_fetch($query);
         if(password_verify($password, $userPassword)){
-            echo "Iniciaste sesión, ".$userNombre;
             $_SESSION['userName'] = $userNombre;
+            header("Location: ./../../../index.php");
         }else
             echo "Usuario o contraseña no válidos.";
             header('refresh:3; ./../../../ingreso.php');
