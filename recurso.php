@@ -16,38 +16,40 @@ mysqli_stmt_bind_param($query, "i", $idPost);
 mysqli_stmt_execute($query);
 mysqli_stmt_store_result($query);
 
-if (mysqli_stmt_num_rows($query) == 0){
+if (mysqli_stmt_num_rows($query) == 0) {
     header('Location: ./../../../ingreso.php');
 }
 if (mysqli_stmt_num_rows($query) == 1) {
-    mysqli_stmt_bind_result($query, $postID, $postTitle, $postImage, $postDate ,$postContent);
+    mysqli_stmt_bind_result($query, $postID, $postTitle, $postImage, $postDate, $postContent);
     mysqli_stmt_fetch($query);
-    
+
 
 ?>
-<!DOCTYPE html>
-<html lang="es">
+    <!DOCTYPE html>
+    <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AprendeFinanzas</title>
-    <link rel="stylesheet" href="./assets/src/css/style.css">
-    <?php include './assets/src/php/favicon.php' ?>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AprendeFinanzas</title>
+        <link rel="stylesheet" href="./assets/src/css/style.css">
+        <?php include './assets/src/php/favicon.php' ?>
+    </head>
 
-<body>
-    <?php require './assets/src/php/minHeader.php';
-    if(isset($others))
-    echo $others; ?>
-    <main>
-        <img src="<?php echo $postImage; ?>">
-        <div><?php echo $postContent; ?>
-        <p>Publicado el: <?php echo $postDate;} ?></p>
-    </main>
-    <?php require './assets/src/php/minFooter.php' ?>
-    <script src="./assets/src/js/app.js"></script>
-</body>
+    <body>
+        <?php require './assets/src/php/minHeader.php';
+        if (isset($others))
+            echo $others; ?>
+        <main class="contenedor">
+            <div>
+                <img class="mb-2" src="<?php echo $postImage; ?>">
+                <?php echo $postContent; ?>
+                <p>Publicado el: <?php echo $postDate;
+                                } ?></p>
+        </main>
+        <?php require './assets/src/php/minFooter.php' ?>
+        <script src="./assets/src/js/app.js"></script>
+    </body>
 
-</html>
+    </html>

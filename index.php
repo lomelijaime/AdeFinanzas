@@ -66,7 +66,7 @@ require './assets/src/php/postsConexion.php';
                         <div class="card-contenido">
                             <h3 class=""><?php echo $post['Title']; ?></h3>
                             <p class=""><?php echo $post['Date']; ?></p>
-                            <a href="/AdeFinanzas/recurso.php?publicacionId=<?php echo $post['ID_Post']; ?>" class="boton w-sm-total card-btn">Ver más</a>
+                            <a href="/adefinanzas/recurso.php?publicacionId=<?php echo $post['ID_Post']; ?>" class="boton w-sm-total card-btn">Ver más</a>
                         </div>
                     </div>
                 <?php }?>
