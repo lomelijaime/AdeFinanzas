@@ -17,7 +17,7 @@ mysqli_stmt_execute($query);
 mysqli_stmt_store_result($query);
 
 if (mysqli_stmt_num_rows($query) == 0) {
-    header('Location: ./../../../ingreso.php');
+    header('Location: ./index.php');
 }
 if (mysqli_stmt_num_rows($query) == 1) {
     mysqli_stmt_bind_result($query, $postID, $postTitle, $postImage, $postDate, $postContent);

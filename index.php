@@ -84,7 +84,7 @@ require './assets/src/php/postsConexion.php';
                             </div>
                             <div class="campo">
                                 <label>Teléfono</label>
-                                <input class="texto-campo" type="tel" name="telefono" id="frmTelefono" placeholder="Tu Teléfono" required autocomplete="off" />
+                                <input class="texto-campo" type="text" name="telefono" id="frmTelefono" placeholder="Tu Teléfono" required autocomplete="off" />
                             </div>
                             <div class="campo">
                                 <label>Correo Electrónico</label>
