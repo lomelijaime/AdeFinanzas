@@ -68,24 +68,21 @@ const loginAnimation = () => {
 
 loginAnimation();
 
-//Validación Formularios
-//  document.addEventListener("DOMContentLoaded", () => {
-//    document.getElementById('btnLogin').addEventListener("click", validarFormularioIngreso);
-// });
-//
-// const validarFormularioIngreso = e => {
-//    e.preventDefault();
-//    let usuario = document.querySelector('#frmUsername').value;
-//    let password = document.querySelector('#frmPassword').value;
-//    if (usuario.length === 0 || password.length === 0){
-//       alert('Por favor, ingresa tus credenciales de ingreso.');
-//       return;
-//    }
-//    this.submit();
-// }
+//Validación simple de formularios de iniciar sesión y registrarse
+const formIngreso = document.getElementById("frmLogin");
+formIngreso.addEventListener("submit", e => {
+  e.preventDefault();
+  let usuarioLogin = document.querySelector("#frmUsernameLogin").value;
+  let passwordLogin = document.querySelector("#frmPasswordLogin").value;
+  if (usuarioLogin.length === 0 || passwordLogin.length === 0 ) {
+    alert("Debes llenar todos los campos para iniciar sesión.");
+    return;
+  }
+  formIngreso.submit();
+});
 
 const formRegistro = document.getElementById("frmSignup");
-formRegistro.addEventListener("onsubmit", e => {
+formRegistro.addEventListener("submit", e => {
   e.preventDefault();
   let nombre = document.querySelector("#frmNameSignup").value;
   let usuario = document.querySelector("#frmUsernameSignup").value;

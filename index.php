@@ -1,4 +1,5 @@
 <?php
+session_start();
 require './assets/src/php/postsConexion.php';
 ?>
 <!DOCTYPE html>
@@ -65,7 +66,7 @@ require './assets/src/php/postsConexion.php';
                         <div class="card-contenido">
                             <h3 class=""><?php echo $post['Title']; ?></h3>
                             <p class=""><?php echo $post['Date']; ?></p>
-                            <a href="/aprendefinanzas/recurso/<?php echo $post['ID_Post']; ?>" class="boton w-sm-total card-btn">Ver más</a>
+                            <a href="/adefinanzas/recurso.php?publicacionId=<?php echo $post['ID_Post']; ?>" class="boton w-sm-total card-btn">Ver más</a>
                         </div>
                     </div>
                 <?php }?>
@@ -83,7 +84,7 @@ require './assets/src/php/postsConexion.php';
                             </div>
                             <div class="campo">
                                 <label>Teléfono</label>
-                                <input class="texto-campo" type="tel" name="telefono" id="frmTelefono" placeholder="Tu Teléfono" required autocomplete="off" />
+                                <input class="texto-campo" type="text" name="telefono" id="frmTelefono" placeholder="Tu Teléfono" required autocomplete="off" />
                             </div>
                             <div class="campo">
                                 <label>Correo Electrónico</label>

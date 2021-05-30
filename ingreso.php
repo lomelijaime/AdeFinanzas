@@ -15,6 +15,7 @@ session_start();
 
 <body>
     <?php require './assets/src/php/minHeader.php';
+    if (isset($others))
     echo $others; ?>
         <main class="bg-ingresar">
       <div class="oscurecer-fondo">
@@ -32,18 +33,18 @@ session_start();
             </div>
           </div>
           <div class="contenedor_login-registro">
-            <form action="./php/login.php" method="POST" class="formulario_login">
+            <form action="./assets/src/php/login.php" method="POST" class="formulario_login" id="frmLogin">
               <h2>Iniciar Sesión</h2>
-              <input name="username" type="text" placeholder="Usuario" required />
-              <input name="password" type="password" placeholder="Contraseña" required/>
-              <button type="submit">Ingresar</button>
+              <input name="frmUsernameLogin" id="frmUsernameLogin" type="text" placeholder="Usuario" pattern="[a-zA-Z0-9]+" required minlength="6"  />
+              <input name="frmPasswordLogin" id="frmPasswordLogin" type="password" placeholder="Contraseña" required minlength="6"/>
+              <button id="btnLogin" type="submit">Ingresar</button>
             </form>
             <form action="./assets/src/php/signup.php" method="POST" class="formulario_registro" id="frmSignup">
               <h2>Regístrate</h2>
-              <input name="frmNameSignup" id="frmNameSignup" type="text" placeholder="Nombre completo" required/>
-              <input name="frmUsernameSignup" id="frmUsernameSignup" type="text" placeholder="Usuario" required/>
-              <input name="frmPasswordSignup" id="frmPasswordSignup" type="password" placeholder="Contraseña" required/>
-              <input name="frmVerifySignup" id="frmVerifySignup" type="password" placeholder="Repita su contraseña" required/>
+              <input name="frmNameSignup" id="frmNameSignup" type="text" placeholder="Nombre completo" required minlength="6"/>
+              <input name="frmUsernameSignup" id="frmUsernameSignup" type="text" placeholder="Usuario" pattern="[a-zA-Z0-9]+" required minlength="6"/>
+              <input name="frmPasswordSignup" id="frmPasswordSignup" type="password" placeholder="Contraseña" required minlength="6"/>
+              <input name="frmVerifySignup" id="frmVerifySignup" type="password" placeholder="Repita su contraseña" required minlength="6"/>
               <button id="btnRegister" type="submit">Registrarse</button>
             </form>
           </div>

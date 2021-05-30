@@ -1,10 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
-   document.getElementById('frmContacto').addEventListener("submit", validarFormulario);
-});
-
-const validarFormulario = e => {
-   e.preventDefault();
-   let nombre = document.querySelector('#frmNombre').value;
+const formContacto = document.getElementById("frmContacto");
+formContacto.addEventListener("submit", e => {
+  e.preventDefault();
+  let nombre = document.querySelector('#frmNombre').value;
    let telefono = document.querySelector('#frmTelefono').value;
    let correo = document.querySelector('#frmEmail').value;
    let contenido = document.querySelector('#frmContenido').value;
@@ -12,5 +9,5 @@ const validarFormulario = e => {
       alert('Debes llenar todos los campos para contactarnos.');
       return;
    }
-   this.submit();
-}
+  formContacto.submit();
+});
